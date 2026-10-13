@@ -6,9 +6,9 @@ Each level solves the main weakness of the one before it:
 
 | Level | Folder | Data moved by | What the CPU does |
 |---|---|---|---|
-| L1 | `L1_polling/` | CPU | Waits in a loop for every byte, then copies it |
-| L2 | `L2_interrupt/` | CPU, inside an interrupt | Works on other things; runs a short ISR per byte |
-| L3 | `L3_dma/` | GPDMA controller | Starts a transfer, gets one interrupt when it's done |
+| L1 | `L1-UART_Driver/` | CPU | Waits in a loop for every byte, then copies it |
+| L2 | `L2-UART_Driver/` | CPU, inside an interrupt | Works on other things; runs a short ISR per byte |
+| L3 | `L3-UART_Driver/` | GPDMA controller | Starts a transfer, gets one interrupt when it's done |
 
 Each folder is a complete, self-contained project: `stm32u5_regs.h`, `uart.h`, `uart.c`, `main.c`, and its own README.
 
